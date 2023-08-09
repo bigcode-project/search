@@ -46,7 +46,7 @@ mappings = {
         }
 }
 
-# es.indices.create(index="bigcode-stack-march-no-pii", mappings=mappings, settings=settings)
+es.indices.create(index="bigcode-stack-march-no-pii", mappings=mappings, settings=settings)
 
 def doc_generator():
     languages = os.listdir("./data/stack-march-no-pii")
