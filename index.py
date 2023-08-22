@@ -50,7 +50,8 @@ es.indices.create(index="bigcode-stack-march-no-pii", mappings=mappings, setting
 
 def doc_generator():
     languages = os.listdir("./data/stack-march-no-pii")
-    for language in languages:
+    # for language in languages:
+    for language in ['jupyter-scripts-dedup-filtered']:
         # metadata = get_metadata(language)
         dset = load_dataset("data/stack-march-no-pii", data_dir=language, split="train", streaming=True)
         for row in dset:
